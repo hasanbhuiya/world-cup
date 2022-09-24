@@ -3,6 +3,16 @@ body{
     width: 100%;
     height: auto;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 60px;
+}
+h4{
+    font-size: 18px;
+    line-height: 27px;
 }
 main{
     margin-top: 3%;
@@ -36,14 +46,17 @@ header{
 .banner-image img{
 width: 60%;
 padding-left: 15%;
+transition: width 2s;
 }
-
+.banner-image img:hover{
+    width: 65%;
+}
 .top-button{
  width:12rem;
  height:3rem; 
  margin-top: 3rem;  
  display: flex;
- background-color:tomato;
+ background-color:#DD0000;
  align-items: center;
  justify-content: center;
  border-radius: 5px;
@@ -83,11 +96,24 @@ flex-direction: column;
     text-decoration: none;
     color: black;
 }
+.Blog-button:hover{
+    background-color: #DD0000;
+    transition: .5s;
+}
+
 .blog-right{
 display: grid;
 grid-template-columns: repeat(3,1fr);
 grid-gap: 2%;
 width: 75%;
+}
+.blog{
+    border: 1px solid#E8E8E8;
+    border-radius: 10px;
+    
+}
+.blog-content{
+padding-left: 5%;
 }
 .blog-images img{
     width: 100%;
@@ -108,6 +134,23 @@ button{
 }
 .icon{
     margin-right: 3px;
+}
+.veiw-all-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 150px;
+}
+.veiw-all-button p{
+    width: 132px;
+    height: 47px;
+    border-radius: 5px;
+    color: white;    
+    background-color: #DD0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 hr{
     width: 85%;
@@ -136,11 +179,30 @@ footer{
     text-decoration: none;
     color: white;
 }
+.social-media{
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+}
+.social-media a{
+    color: white;
+    font-size:20px;
+    padding:1rem;
+    border-radius: 5px;
+}
+.social-media a:hover{
+    background-color:#2E86C1;
+}
 /* media query  */
 /* tablate device */
 @media only screen and (min-width:668px) and (max-width:992px) {
+    h1{
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 42px;
+    }
     header{
-        height: 330px;
+        height: 380px;
     }
     .blog-left{
         flex-direction:row;
@@ -168,16 +230,28 @@ footer{
         margin-bottom: 5%;
         grid-template-columns: repeat(2,1fr);
     }
+    .veiw-all-button{
+        display:block;
+        display: flex;
+        align-items: center;
+    }
     .footer-menu{
-        width:500px;
+        width:580px;
         flex-wrap: wrap;
     }
 }
 /* mobile device  */
 @media only screen and (max-width:688px) {
    header{
-    height: 750px;
+    height:800px;
+    
    }
+   h1 {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 50px;
+}
+
     .top-banner{
     flex-direction:column;
    } 
@@ -199,7 +273,7 @@ footer{
    }
    .Blog-button{
     width: auto;
-    border: 1px solid gray;
+    border: 1px solid #E8E8E8;
    }
     .blog-right{
         width:80%;
@@ -207,11 +281,11 @@ footer{
         margin-right:10%;
         height:80%;
         margin-top: 5%;
-        margin-bottom:500px;
+        margin-bottom:600px;
         grid-template-columns:1fr;
     }
    footer{
-    height:700px;
+    height:800px;
    
    }
    .footer-menu{
